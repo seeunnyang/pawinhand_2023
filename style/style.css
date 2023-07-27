@@ -5,6 +5,7 @@ header {
     height:100px; margin:0 auto;
     display:flex; flex-flow:row nowrap; 
     align-items:center; justify-content:space-between;
+    position: relative; /* m_nav_open absolute 부모기준 */
 }
 header h1 {
     background:lightgoldenrodyellow; 
@@ -25,3 +26,24 @@ header nav ul li a {
 }
 /* 모바일 메뉴 - 데스크탑에서 숨기기 */
 header nav .m_nav {display:none;}
+/* header .m_nav_open {display:none;} */
+header .m_nav_open {
+    background:lightpink; 
+    display:none; /*클릭했을때 보이게 처음엔 숨기기*/
+    position:absolute; top:100px; /*header밖으로 빼기위해 position주기*/
+    /* width:calc(100% - 30px); */
+    width: 100%;
+    padding:40px 0;
+}
+header .m_nav_open #close {
+    font-size: 24px; /* 폰트어썸으로 가져왔기 때문에 font-size로 적용 */
+    position:absolute; top:15px; right:15px;
+}
+header .m_nav_open ul {
+    background:lightgoldenrodyellow;
+    text-align:center;
+}
+header .m_nav_open ul li {margin-bottom:30px;}
+header .m_nav_open ul li a {
+    font-size:1.33rem; letter-spacing:-0.02em;
+}
