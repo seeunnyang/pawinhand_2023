@@ -4,6 +4,7 @@
 @media screen and (max-width:1160px) {/* 1160px 이하를 처리하겠다 */
     /* 1160px 이하일 경우 15px 여백적용 */
     header {width: calc(100% - 30px);}
+    /* main #pawin_slide {width: calc(100% - 30px);} */ /* header이랑 똑같이 1160px이하일때 좌우여백처리 */
 }/* 1160 end */
 @media screen and (max-width:900px) {
     header nav ul {display:none;} /* ul숨기기 */
@@ -23,4 +24,9 @@
     header nav .m_nav span:nth-child(3) {}
     /* .m_nav_open */
     header .m_nav_open {display:block;}
+    /* pawin-slide */
+    /* 반응형웹의 슬라이드 높이 고정하는 슬라이드의 경우 데스크탑, 모바일용의 이미지를 따로 제작하고 @madia 모바일 조건에서 m 이미지로 변경하는 경로를 작성 */
+    main #pawin_slide .swiper-wrapper .slide1 {
+        background:url(../images/pawin_slide_m.jpg) center; /* 모바일 배너사진 만든거 넣기 */
+    }
 }/* 900 end */
