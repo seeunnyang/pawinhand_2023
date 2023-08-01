@@ -96,7 +96,7 @@ main #pawin_slide .swiper-button-next::after {display:none;}
 /* ---------------------------------------------------------------------------- */
 /* 1160*300 slide*3 swiper 생성  */
 main #slide_2 {
-    width:1160px; height:300px;
+    max-width:1160px; height:300px;
     background:gray;
 }
 main #slide_2 .swiper-wrapper {}
@@ -123,3 +123,22 @@ main #slide_2 .swiper-button-next {
 /* swiper-slide 라이브러리에서 기본제공하는 이전,다음 숨기기 */
 main #slide_2 .swiper-button-prev::after,
 main #slide_2 .swiper-button-next::after {display:none;}
+/* pawin-slide2 */
+main #pawin_slide2 {
+    max-width: 1160px; margin: 0 auto;
+    /* slide대상으로 img태그를 삽입한 경우 높이값은 이미지 태그크기만큼 자동으로 설정되므로 별도의 높이값은 작성할 필요가 없다. */
+}
+main #pawin_slide2 .swiper-wrapper .swiper-slide img {width: 100%;} /*이미지를 width에따라 
+크기 달라지게 적용하기위해 부모에 max-width적용하고 이미지에width100%적용하기*/
+
+/* 입양정보 slide */
+main .dog_info {
+    padding: 100px 0 50px;
+    font-size: 2rem; text-align: center;
+}
+main #dog_info_slide {
+    background:lightblue; /*확인용 색 넣기*/
+    max-width: 1160px; margin: 0 auto;
+    width:calc(100% - 30px);
+}
+main #dog_info_slide .swiper-wrapper .swiper-slide img {width:100%;}
